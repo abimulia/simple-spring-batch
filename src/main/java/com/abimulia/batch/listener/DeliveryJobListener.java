@@ -29,6 +29,8 @@ public class DeliveryJobListener implements JobExecutionListener {
 	@Override
 	public void beforeJob(JobExecution jobExecution) {
 		log.debug("--beforeJob() jobExecution: "+ jobExecution);
+		System.out.println("###Starting###");
+		System.out.println(jobExecution.getJobId());
 		JobExecutionListener.super.beforeJob(jobExecution);
 	}
 

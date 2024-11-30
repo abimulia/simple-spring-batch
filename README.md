@@ -1,18 +1,20 @@
 # Spring Batch HyperSQL
-[Spring Boot v3.3.5](https://img.shields.io/badge/Java-SpringBoot-green)](https://spring.io/)
-[License](http://img.shields.io/:license-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
+![Spring Boot v3.3.5](https://img.shields.io/badge/Java-SpringBoot-green)](https://spring.io/)
+![License](http://img.shields.io/:license-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
 
 This project created by `start.spring.io` contain [Spring Boot](https://spring.io/) version 3.3.5.
 
 
 Spring Batch project with HyperSQL Database
 
-Simple spring batch service to get data from csv file, convert the data and then store the converted data to database in this project HyperSQL database.
+Simple spring batch service to run a deliveryPackageJob, that contain one packageItemStep with taskLet and print out `The item has been packaged`
 
 
 ## Development server
 
 Run `mvn spring-boot:run` for a dev server. 
+
+![image](https://github.com/user-attachments/assets/88a6397f-8b8a-4bfa-9828-95ca7f3ebaf2)
 
 
 ### Reference Documentation

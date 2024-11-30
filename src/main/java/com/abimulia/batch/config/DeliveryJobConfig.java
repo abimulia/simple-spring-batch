@@ -16,6 +16,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.jdbc.support.JdbcTransactionManager;
 
+import com.abimulia.batch.listener.DeliveryJobListener;
+
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -43,9 +45,9 @@ public class DeliveryJobConfig {
 	}
 
 	@Bean
-	public Job job(JobRepository jobRepository, Step packageItemStep) {
+	public Job job(JobRepository jobRepository, Step packageItemStep,DeliveryJobListener listener) {
 		log.debug("--job() jobRepository: "+ jobRepository + " step: " + packageItemStep );
-		return new JobBuilder("deliverPackageJob", jobRepository).start(packageItemStep).build();
+		return new JobBuilder("deliverPackageJob", jobRepository).listener(listener).start(packageItemStep).build();
 	}
 
 }
